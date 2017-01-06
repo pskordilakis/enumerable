@@ -1,0 +1,25 @@
+{
+    "name": "pskordilakis/enumerable",
+    "description": "Higher order functions for php containers",
+    "type": "library",
+    "require": {
+
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^5.7",
+        "psy/psysh": "^0.8.0"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Panagiotis Skordilakis",
+            "email": "p.skordilakis@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Enumerable\\": "src/"
+        }
+    },
+    "minimum-stability": "dev"
+}
