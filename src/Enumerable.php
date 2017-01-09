@@ -6,7 +6,7 @@ class Enumerable
 {
     public static function reduce($T, \Closure $fun, $acc = null)
     {
-        $acc = $acc ?? $T[1];
+        $acc = $acc ?? $T[0];
 
         foreach ($T as $item) {
             $acc = $fun($item, $acc);
@@ -30,6 +30,13 @@ class Enumerable
                 $acc[] = $item;
             }
             return $acc;
+        }, []);
+    }
+
+    public static function reverse($T)
+    {
+        return self::reduce($T, function ($item, $acc) {
+            return array_unshift($acc, $item);
         }, []);
     }
 }
