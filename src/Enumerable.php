@@ -6,7 +6,7 @@ class Enumerable
 {
     public static function reduce($T, \Closure $fun, $acc = null)
     {
-        $acc = $acc ?? $T[1];
+        $acc = $acc ?? $T[0];
 
         foreach ($T as $item) {
             $acc = $fun($item, $acc);
