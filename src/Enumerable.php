@@ -32,4 +32,11 @@ class Enumerable
             return $acc;
         }, []);
     }
+
+    public static function reverse($T)
+    {
+        return self::reduce($T, function ($item, $acc) {
+            return array_unshift($acc, $item);
+        }, []);
+    }
 }
